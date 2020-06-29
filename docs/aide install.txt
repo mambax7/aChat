@@ -14,10 +14,10 @@ Uploadez les fichiers comme pour les autres modules.
 Installez le module via l'admin xoops comme pour les 
 autres modules.
 
-Paramétrez le module et les bloc.
+ParamÃ©trez le module et les bloc.
 
-Vérifiez les droits d'écriture du répertoire qui contient 
-les fichiers logs (par défaut modules/aChat/logs). 
+VÃ©rifiez les droits d'Ã©criture du rÃ©pertoire qui contient 
+les fichiers logs (par dÃ©faut modules/achat/logs).
 CHMOD 777
 
 

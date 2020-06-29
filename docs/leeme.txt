@@ -1,49 +1,49 @@
 Niluge_Kiwi - 26.08.2006
 --------------------------------------------------------
-M骴ulo
+M贸dulo
                      aChat v0.2
                                             Para Xoops 2
 --------------------------------------------------------
 Testeado en las versione 2.0.16 de Xoops.
 --------------------------------------------------------
 
-Un m骴ulo de chat con AJAX: aChat!
+Un m贸dulo de chat con AJAX: aChat!
 
 --------------------------------------------------------
 
-aChat es un modulo pensado ser un Tagboard, un peque駉 
+aChat es un modulo pensado ser un Tagboard, un peque帽o 
 chat en un bloque de un sitio, pero tambien puede ser 
-usado en p醙ina completa.
+usado en p谩gina completa.
 
-Utiliza la tecnolog韆 AJAX que permite enviar y actualizar
-los mensajes sin necesidad de recargar la p醙ina.
+Utiliza la tecnolog铆a AJAX que permite enviar y actualizar
+los mensajes sin necesidad de recargar la p谩gina.
 
 --------------------------------------------------------
 
-Esto es una versi髇 beta, hagan la prueba de 閘 para que 
+Esto es una versi贸n beta, hagan la prueba de 茅l para que 
 corrija los errores.
 
 --------------------------------------------------------
 
 
-Caracter韘ticas:
+Caracter铆sticas:
 
 
 Lado cliente:
 
 - Posiblidad de utilizar los BBcodes y las caritas (smilies)
-- Elecci髇 del color del mensaje
+- Elecci贸n del color del mensaje
 - Truncamiento al mostrar URLs muy largas
   (problema: por el momento funciona bajo Firefox solamente)
-- Elecci髇 de un alias para los visitantes an髇imos
-- 2 sub men鷖:
+- Elecci贸n de un alias para los visitantes an贸nimos
+- 2 sub men煤s:
    - Ver todos los mensajes de la base de datos
    - Ver los mensajes guardados en los archivos html
      creados al purgar
 - 2 bloques:
    - Uno para mostrar el chat (comme sur index.php)
-   - Uno para mostrar solamente los 鷏timos mensajes, 
-     sin autorefresh y sin formulario de env韔.
+   - Uno para mostrar solamente los 煤ltimos mensajes, 
+     sin autorefresh y sin formulario de env铆o.
 
 
 Lado admin:
@@ -52,28 +52,28 @@ Lado admin:
 - Elegir los colores posibles de los mensajes
 - Log e IP de los posteadores (visible al sobrevolar los mensajes 
   del lado cliente si el admin lo permite)
-- Vista del n鷐ero de mensajes en la base de datos
-- Funci髇 de purgado permitiendo limpiar la tabala para alivianar 
+- Vista del n煤mero de mensajes en la base de datos
+- Funci贸n de purgado permitiendo limpiar la tabala para alivianar 
   la base de datos:
-  - Por n鷐ero de mensajes
+  - Por n煤mero de mensajes
   - Por fecha
 - Posibilidad de crear los archivos logs html al momento de purgar 
-  para no perder ning鷑 mensaje
-- Elecci髇 del tama駉 de letra y el n鷐ero de mensajes del lado 
+  para no perder ning煤n mensaje
+- Elecci贸n del tama帽o de letra y el n煤mero de mensajes del lado 
   del admin y en las opciones del bloque
-- Elecci髇 de los permisos: derecho a enviar mensajes
-- Posiblidad de clonar el m骴ulo con un s髄o clic, 
-  (por ej. para administrar diferentes salas de discuci髇)
-- Opci髇 de desabilitar el campo alias para los usuarios an髇imos
+- Elecci贸n de los permisos: derecho a enviar mensajes
+- Posiblidad de clonar el m贸dulo con un s贸lo clic, 
+  (por ej. para administrar diferentes salas de discuci贸n)
+- Opci贸n de desabilitar el campo alias para los usuarios an贸nimos
 
 
-Traducci髇 al ingl閟 a rehacer
+Traducci贸n al ingl茅s a rehacer
 Si te interesa: contactarme
 
 --------------------------------------------------------
 
 
-Soporte en franc閟 e ingl閟, en la medida de lo posible.
+Soporte en franc茅s e ingl茅s, en la medida de lo posible.
 
 kiwiiii@gmail.com
 

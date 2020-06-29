@@ -1,51 +1,45 @@
 <?php
-// $Id: header.php, see below
-//  ------------------------------------------------------------------------ //
-//                XOOPS - PHP Content Management System                      //
-//                    Copyright (c) 2000 XOOPS.org                           //
-//                       <http://www.xoops.org/>                             //
-//  ------------------------------------------------------------------------ //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
 
-// Créé par Niluge_Kiwi
-// v 0.23 2007/08/13 23:05:22
-// ======================================================================== //
-//
-//   www.lmdmf.net
-//
-// kiwiiii@gmail.com
-//
-// ======================================================================== //
-//
-include_once "../../mainfile.php";
+declare(strict_types=1);
+/*
+ You may not change or alter any portion of this comment or credits
+ of supporting developers from this source code or any supporting source code
+ which is considered copyrighted (c) material of the original comment or credit authors.
 
-if (!defined('XOOPS_ROOT_PATH')) {
-	die("XOOPS root path not defined");
-}
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+*/
+/**
+ * Module: Achat
+ *
+ * @category        Module
+ * @author          Niluge_Kiwi (kiwiiii@gmail.com)
+ * @copyright       {@link https://xoops.org/ XOOPS Project}
+ * @license         GNU GPL 2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+ */
 
-$msgobj_h =& xoops_getmodulehandler('message');
+use XoopsModules\Achat;
+use XoopsModules\Achat\Helper;
+use XoopsModules\Achat\Utility;
 
-include_once XOOPS_ROOT_PATH."/modules/".$xoopsModule->getVar("dirname")."/include/functions.php";
+include __DIR__ . '/preloads/autoloader.php';
 
-include_once XOOPS_ROOT_PATH."/class/xoopsformloader.php";
-include_once XOOPS_ROOT_PATH."/modules/".$xoopsModule->getVar("dirname")."/class/formachat.php";
+require  dirname(dirname(__DIR__)) . '/mainfile.php';
 
-?>
+defined('XOOPS_ROOT_PATH') || die('XOOPS root path not defined');
+
+require XOOPS_ROOT_PATH . '/header.php';
+
+$moduleDirName = basename(__DIR__);
+
+/** @var Helper $helper */
+$helper = Helper::getInstance();
+
+/** @var \XoopsPersistableObjectHandler $messageHandler */
+$messageHandler = $helper->getHandler('Message');
+/** @var \XoopsPersistableObjectHandler $messagesHandler */
+$messagesHandler = $helper->getHandler('Messages');
+
+require_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
+//require_once XOOPS_ROOT_PATH . '/modules/' . $xoopsModule->getVar('dirname') . '/class/formachat.php';

@@ -3,7 +3,7 @@
 //  ------------------------------------------------------------------------ //
 //                XOOPS - PHP Content Management System                      //
 //                    Copyright (c) 2000 XOOPS.org                           //
-//                       <http://www.xoops.org/>                             //
+//                       <https://www.xoops.org>                             //
 // ------------------------------------------------------------------------- //
 //  This program is free software; you can redistribute it and/or modify     //
 //  it under the terms of the GNU General Public License as published by     //
@@ -24,8 +24,7 @@
 //  along with this program; if not, write to the Free Software              //
 //  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
 //  ------------------------------------------------------------------------ //
-
-// Créé par Niluge_Kiwi
+// CrÃ©Ã© par Niluge_Kiwi
 // v 0.23 2007/10/12 22:38:22
 // ======================================================================== //
 //
@@ -35,62 +34,81 @@
 //
 // ======================================================================== //
 //
-include "./header.php";
-include XOOPS_ROOT_PATH.'/header.php';
 
-$from = !empty($_GET['from']) ? intval($_GET['from']) : 0;
-$to = isset($_GET['to']) ? intval($_GET['to']) : 0;
+use XoopsModules\Achat\Utility;
 
-$purge_folder = rtrim (ltrim(getmoduleoptionNK('purge_folder'), '/'), '/');
-$rep = empty($purge_folder) ? XOOPS_ROOT_PATH.'/modules/aChat/logs' : XOOPS_ROOT_PATH.'/'.$purge_folder;
-
+require __DIR__ . '/header.php';
+require XOOPS_ROOT_PATH . '/header.php';
+$from         = !empty($_GET['from']) ? (int)$_GET['from'] : 0;
+$to           = isset($_GET['to']) ? (int)$_GET['to'] : 0;
+$purge_folder = rtrim(ltrim(Utility::getModuleOptions('purge_folder'), '/'), '/');
+$rep          = empty($purge_folder) ? XOOPS_ROOT_PATH . '/modules/achat/logs' : XOOPS_ROOT_PATH . '/' . $purge_folder;
+/**
+ * @param $rep
+ */
 function archives_home($rep)
 {
-	echo '<div style="text-align:center;">
-	<h1>'._MD_ACHAT_TITLE.'</h2>
-	<h3>'._MD_ACHAT_TITLE_ARCHIVES.'</h3>
-</div><br />';
-
-	$rep = opendir($rep);
-	$AuMoinsUnLog = false;
-	echo '<ul>';
-	while ($file = readdir($rep)){
-		if($file != '..' && $file !='.' && $file !=''){ 
-			if (!is_dir($file) && preg_match('/aChat_logs\_\-\_([0-9]*)\_to\_([0-9]*)\.html/',$file, $results)){
-				$AuMoinsUnLog = true;
-				echo '<li><a href="'.XOOPS_URL.'/modules/aChat/viewarchives.php?from='.$results[1].'&to='.$results[2].'">'._MD_ACHAT_MESSAGES .' '. _MD_ACHAT_ARCHIVE_FROM .' '.formatTimestamp($results[1]).' '. _MD_ACHAT_ARCHIVE_TO .' '.formatTimestamp($results[2]).'</a></li>';
-			}
-		}
-	}
-	if(!$AuMoinsUnLog) {
-		echo '<li>'._MD_ACHAT_ARCHIVE_NO.'</li>';
-	}
-	echo '<ul>';
+    echo '<div style="text-align:center;">
+	<h1>' . _MD_ACHAT_TITLE . '</h2>
+	<h3>' . _MD_ACHAT_TITLE_ARCHIVES . '</h3>
+</div><br>';
+    $rep          = opendir($rep);
+    $AuMoinsUnLog = false;
+    echo '<ul>';
+    while ($file = readdir($rep)) {
+        if ('..' != $file && '.' != $file && '' != $file) {
+            if (!is_dir($file) && preg_match('/achat_logs\_\-\_([0-9]*)\_to\_([0-9]*)\.html/', $file, $results)) {
+                $AuMoinsUnLog = true;
+                echo '<li><a href="'
+                     . XOOPS_URL
+                     . '/modules/achat/viewarchives.php?from='
+                     . $results[1]
+                     . '&to='
+                     . $results[2]
+                     . '">'
+                     . _MD_ACHAT_MESSAGES
+                     . ' '
+                     . _MD_ACHAT_ARCHIVE_FROM
+                     . ' '
+                     . formatTimestamp($results[1])
+                     . ' '
+                     . _MD_ACHAT_ARCHIVE_TO
+                     . ' '
+                     . formatTimestamp($results[2])
+                     . '</a></li>';
+            }
+        }
+    }
+    if (!$AuMoinsUnLog) {
+        echo '<li>' . _MD_ACHAT_ARCHIVE_NO . '</li>';
+    }
+    echo '<ul>';
 }
 
+/**
+ * @param $from
+ * @param $to
+ * @param $rep
+ */
 function archive_read($from, $to, $rep)
 {
-	$file = 'aChat_logs_-_'. $from .'_to_'. $to .'.html';
-	$filename = $rep.'/'.$file;	
+    $file     = 'achat_logs_-_' . $from . '_to_' . $to . '.html';
+    $filename = $rep . '/' . $file;
+    echo '<a href="' . XOOPS_URL . '/modules/achat/viewarchives.php">' . _MD_ACHAT_ARCHIVE_RETURN . '</a><hr><br>';
+    if (file_exists($filename)) {
+        include($filename);
+    } else {
+        echo _MD_ACHAT_ARCHIVE_NOARCHIVESELECTED;
+    }
+    echo '<br><hr><a href="' . XOOPS_URL . '/modules/achat/viewarchives.php">' . _MD_ACHAT_ARCHIVE_RETURN . '</a>';
+}
 
-	echo '<a href="'.XOOPS_URL.'/modules/aChat/viewarchives.php">'. _MD_ACHAT_ARCHIVE_RETURN . '</a><hr /><br />';
-	
-	if(file_exists($filename)) {
-		include($filename);
-	} else {
-		echo _MD_ACHAT_ARCHIVE_NOARCHIVESELECTED;
-	}
-	
-	echo '<br /><hr /><a href="'.XOOPS_URL.'/modules/aChat/viewarchives.php">'. _MD_ACHAT_ARCHIVE_RETURN . '</a>';
+switch ($from) {
+    case 0:
+        archives_home($rep);
+        break;
+    default:
+        archive_read($from, $to, $rep);
+        break;
 }
-switch($from) {
-	case 0 :
-	archives_home($rep);
-	break;
-	
-	default :
-	archive_read($from, $to, $rep);
-	break;
-}
-include(XOOPS_ROOT_PATH."/footer.php");
-?>
+include(XOOPS_ROOT_PATH . '/footer.php');

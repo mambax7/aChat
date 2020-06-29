@@ -1,49 +1,54 @@
 <?php
+
+declare(strict_types=1);
 /*
- * You may not change or alter any portion of this comment or credits
- * of supporting developers from this source code or any supporting source code
- * which is considered copyrighted (c) material of the original comment or credit authors.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ You may not change or alter any portion of this comment or credits
+ of supporting developers from this source code or any supporting source code
+ which is considered copyrighted (c) material of the original comment or credit authors.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  */
 
 /**
- * @copyright    The XOOPS Project http://sourceforge.net/projects/xoops/
- * @license      GNU GPL 2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
- * @package
- * @since
- * @author     XOOPS Development Team
- * @version    $Id $
+ * Module: Achat
+ *
+ * @category        Module
+ * @author          XOOPS Development Team <https://xoops.org>
+ * @copyright       {@link https://xoops.org/ XOOPS Project}
+ * @license         GNU GPL 2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
  */
 
-$path = dirname(dirname(dirname(dirname(__FILE__))));
-include_once $path . '/mainfile.php';
-include_once $path . '/include/cp_functions.php';
-require_once $path . '/include/cp_header.php';
+use Xmf\Module\Admin;
+use XoopsModules\Achat;
+use XoopsModules\Achat\Helper;
 
-global $xoopsModule;
+require dirname(dirname(dirname(__DIR__))) . '/include/cp_header.php';
+require dirname(dirname(dirname(__DIR__))) . '/class/xoopsformloader.php';
+require dirname(__DIR__) . '/include/common.php';
+require dirname(__DIR__) . '/preloads/autoloader.php';
+$moduleDirName = basename(dirname(__DIR__));
+$moduleDirNameUpper = mb_strtoupper($moduleDirName);
 
-$thisModuleDir = $GLOBALS['xoopsModule']->getVar('dirname');
-
-//if functions.php file exist
-//require_once dirname(dirname(__FILE__)) . '/include/functions.php';
-
+/** @var \XoopsModules\Achat\Helper $helper */
+$helper = Helper::getInstance();
+/** @var Xmf\Module\Admin $adminObject */
+$adminObject   = Admin::getInstance();
+$db            = \XoopsDatabaseFactory::getDatabaseConnection();
+$pathIcon16    = Admin::iconUrl('', 16);
+$pathIcon32    = Admin::iconUrl('', 32);
+$pathModIcon32 = $helper->getConfig('modicons32');
+/** @var \XoopsPersistableObjectHandler $messagesHandler */
+$messagesHandler = $helper->getHandler('Messages');
+$myts            = \MyTextSanitizer::getInstance();
+if (!isset($xoopsTpl) || !is_object($xoopsTpl)) {
+    require XOOPS_ROOT_PATH . '/class/template.php';
+    $xoopsTpl = new \XoopsTpl();
+}
 // Load language files
-xoops_loadLanguage('admin', $thisModuleDir);
-xoops_loadLanguage('modinfo', $thisModuleDir);
-xoops_loadLanguage('main', $thisModuleDir);
+$helper->loadLanguage('admin');
+$helper->loadLanguage('modinfo');
+$helper->loadLanguage('common');
 
-$pathIcon16 = '../'.$xoopsModule->getInfo('icons16');
-$pathIcon32 = '../'.$xoopsModule->getInfo('icons32');
-$pathModuleAdmin = $xoopsModule->getInfo('dirmoduleadmin');
-
-include_once $GLOBALS['xoops']->path($pathModuleAdmin.'/moduleadmin.php');
-
-include_once XOOPS_ROOT_PATH . '/class/xoopsmodule.php';
-include_once './functions.php';
-include_once XOOPS_ROOT_PATH . '/class/xoopsformloader.php';
-
-$myts = &MyTextSanitizer::getInstance();
-$msgobj_h =& xoops_getmodulehandler('message');
+//xoops_cp_header();

@@ -1,6 +1,6 @@
 
 --------------------------------------------------------
-Modül
+ModÃ¼l
                      aChat v0.2
                                            Version Xoops 2
 --------------------------------------------------------
@@ -10,19 +10,19 @@ Modül
 --------------------------------------------------------
 
 Merhaba
- modules/aChat/logs klasörüne
-CHMOD 777 uygulayýn
+ modules/achat/logs klasÃ¶rÃ¼ne
+CHMOD 777 uygulayÃ½n
 
-Ayrýca Türkçe Karakter Sorunu Giderilmiþtir!.
+AyrÃ½ca TÃ¼rkÃ§e Karakter Sorunu GiderilmiÃ¾tir!.
 --------------------------------------------------------
 
-Modül yazarý
-Niluge_KiWi iletiþim için kiwiiii@gmail.com
+ModÃ¼l yazarÃ½
+Niluge_KiWi iletiÃ¾im iÃ§in kiwiiii@gmail.com
 Web sitesi
 http://xoops-demo.niluge-kiwi.info/
 
 // ======================================================================== //
-//    Türkçe çeviri: Engin YILDIRIM
+//    TÃ¼rkÃ§e Ã§eviri: Engin YILDIRIM
 //                  (By BaCKStagE)
 //                                 admin-denetim@hotmail.com
 //     www.xoopshocasi.com

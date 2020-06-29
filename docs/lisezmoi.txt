@@ -4,15 +4,15 @@ Module
                      aChat v0.2
                                             Pour xoops 2
 --------------------------------------------------------
-Testé sous Xoops 2.0.16
+TestÃ© sous Xoops 2.0.16
 --------------------------------------------------------
 
 Un module de chat avec AJAX : aChat!
 
 --------------------------------------------------------
 
-aChat est un module censé être une Tagboard, un petit tchat 
-dans un bloc du site, mais il peut être utilisé aussi en 
+aChat est un module censÃ© Ãªtre une Tagboard, un petit tchat 
+dans un bloc du site, mais il peut Ãªtre utilisÃ© aussi en 
 pleine page.
 
 Il utilise la technologie AJAX qui permet d'envoyer et 
@@ -20,24 +20,24 @@ actualiser les messages sans recharger la page.
 
 --------------------------------------------------------
 
-Ceci est une version beta, à tester pour que je l'améliore!
+Ceci est une version beta, Ã  tester pour que je l'amÃ©liore!
 
 --------------------------------------------------------
 
 
-Fonctionnalités :
+FonctionnalitÃ©s :
 
 
-Côté client:
+CÃ´tÃ© client:
 
-- Possibilité d'utiliser les BBCodes et les smiliyes
+- PossibilitÃ© d'utiliser les BBCodes et les smiliyes
 - Choix de la couleur du message
-- Tronquage à l'affichage d'url trop longues
-( problème : fonctionne que sous FireFox pour l'instant)
+- Tronquage Ã  l'affichage d'url trop longues
+( problÃ¨me : fonctionne que sous FireFox pour l'instant)
 - Choix du pseudo pour les anonymes
 - 2 sous menus :
-   - voir tous les messages de la base de donnée
-   - voir les messages archivés dans des fichiers 
+   - voir tous les messages de la base de donnÃ©e
+   - voir les messages archivÃ©s dans des fichiers 
 html lors des purges
 - 2 blocs :
    - un pour afficher normalement le chat (comme sur index.php)
@@ -45,29 +45,29 @@ html lors des purges
       sans autorefresh et sans formulaire d'envoi
 
 
-Côté admin :
+CÃ´tÃ© admin :
 
 - Activer ou non les BBCodes et smileys
-- Choix des couleurs proposés au visiteur
+- Choix des couleurs proposÃ©s au visiteur
 - Log des ip des posteurs (visible en survole des pseudo des 
-messages coté client si admin)
-- Affichage du nombre de messages dans la base de donnée
+messages cotÃ© client si admin)
+- Affichage du nombre de messages dans la base de donnÃ©e
 - Fonction de purge permettant de vider la table pour soulager 
-la base de donnée :
+la base de donnÃ©e :
   - Par nombre de messages
   - Par date
-- Possibilité de créer des fichiers logs html lors de la purge 
+- PossibilitÃ© de crÃ©er des fichiers logs html lors de la purge 
 pour ne pas perdre les messages
 - Choix de la taille d'affichage et du nombre des messages dans
 l'admin et dans les options du bloc
 - Choix des permissions : droit d'envoyer des messages
-- Possibilité de cloner en un click le module, 
-(pour gérer différents salons de discussion par exemple)
-- Possibilité de désactiver le choix des pseudo pour les anonymes
+- PossibilitÃ© de cloner en un click le module, 
+(pour gÃ©rer diffÃ©rents salons de discussion par exemple)
+- PossibilitÃ© de dÃ©sactiver le choix des pseudo pour les anonymes
 
 
-Traduction en anglais à refaire. 
-Si intéressé : me contacter
+Traduction en anglais Ã  refaire. 
+Si intÃ©ressÃ© : me contacter
 
 --------------------------------------------------------
 
@@ -79,10 +79,10 @@ kiwiiii@gmail.com
 
 --------------------------------------------------------
 
-Problèmes connus:
-- aChat ne fonctionne pas avec multiMenu : il faut effectuer une petite modification pour que ça fonctionne.
-Tout est expliqué dans Comment_faire_marcher_aChat_et_MultiMenu.txt 
-(la méthode peut être appliquée à tout autre module utilisant la fonction javascript window.onload)
+ProblÃ¨mes connus:
+- aChat ne fonctionne pas avec multiMenu : il faut effectuer une petite modification pour que Ã§a fonctionne.
+Tout est expliquÃ© dans Comment_faire_marcher_aChat_et_MultiMenu.txt 
+(la mÃ©thode peut Ãªtre appliquÃ©e Ã  tout autre module utilisant la fonction javascript window.onload)
 
 --------------------------------------------------------
 

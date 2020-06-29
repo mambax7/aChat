@@ -1,25 +1,25 @@
 Niluge_Kiwi - 29.08.2006
 --------------------------------------------------------
-M觗ulo 
+M脫dulo 
                      aChat v0.2
                                             Para Xoops 2
 --------------------------------------------------------
 
 --------------------------------------------------------
-                 AYUDA DE INSTALACI覰
+                 AYUDA DE INSTALACI脫N
 --------------------------------------------------------
 
 Suba los archivos a su servidor, como lo hace para otros
-m骴ulos.
+m贸dulos.
 
-Instale el m骴ulo con el Administrador de M骴ulos de
-Xoops, como lo hace para otros m骴ulos.
+Instale el m贸dulo con el Administrador de M贸dulos de
+Xoops, como lo hace para otros m贸dulos.
 
-Configure el m骴ulo y los bloques.
+Configure el m贸dulo y los bloques.
 
 Verifique que los derechos de escritura de la carpeta
 que contienen los archivos logs (por defecto se
-encuentran en modules/aChat/logs).
+encuentran en modules/achat/logs).
 CHMOD 777
 
 --------------------------------------------------------
@@ -27,7 +27,7 @@ CHMOD 777
 
 
 
-Soporte en franc閟 e ingl閟, en la medida de lo posible.
+Soporte en franc茅s e ingl茅s, en la medida de lo posible.
 
 kiwiiii@gmail.com
 

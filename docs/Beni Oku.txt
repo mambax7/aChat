@@ -1,19 +1,19 @@
-Modül yazarı >>Niluge_Kiwi - 26.08.2006
+ModÃ¼l yazarÃ½ >>Niluge_Kiwi - 26.08.2006
 --------------------------------------------------------
 Modul 
                      aChat v0.2
-                                            xoops 2 için !
+                                            xoops 2 iÃ§in !
 --------------------------------------------------------
 Test edilen versiyonlar 2.0.16
 --------------------------------------------------------
 
-aChat : A chat modulü AJAX kullanılarak yapılmıştır.
+aChat : A chat modulÃ¼ AJAX kullanÃ½larak yapÃ½lmÃ½Ã¾tÃ½r.
 
 --------------------------------------------------------
 
-aChat  chat modülüdür,
+aChat  chat modÃ¼lÃ¼dÃ¼r,
 
-Hamurunda ajax kullanıldığı için sadece mesaj yazma bölümü refresh alarak yenilenmektedir.
+Hamurunda ajax kullanÃ½ldÃ½Ã°Ã½ iÃ§in sadece mesaj yazma bÃ¶lÃ¼mÃ¼ refresh alarak yenilenmektedir.
 
 --------------------------------------------------------
 
@@ -21,38 +21,38 @@ Bu bir beta versiyonudur.
 
 --------------------------------------------------------
 
-Özellikleri:
+Ã–zellikleri:
 
-Misafirler için:
+Misafirler iÃ§in:
 
 - BBCode
-- Renk kodları mesaj için
-- Gereğinden büyük url adresleri görünümü bozmaması için kısıltılır
-( Hepsi değil :) )
-- Misafirleriniz nick seçebilir
-- Veritabanındaki mesajları görebilir
--Arşiv dosyalarındaki mesajları görebilir
-- 2 türlü blok vardır :
-   - Biri Normal sohbeti gösteren, 
-      autorefresh le mesaj gönderilen
-   - Diğeri Son mesajları gösteren, 
+- Renk kodlarÃ½ mesaj iÃ§in
+- GereÃ°inden bÃ¼yÃ¼k url adresleri gÃ¶rÃ¼nÃ¼mÃ¼ bozmamasÃ½ iÃ§in kÃ½sÃ½ltÃ½lÃ½r
+( Hepsi deÃ°il :) )
+- Misafirleriniz nick seÃ§ebilir
+- VeritabanÃ½ndaki mesajlarÃ½ gÃ¶rebilir
+-ArÃ¾iv dosyalarÃ½ndaki mesajlarÃ½ gÃ¶rebilir
+- 2 tÃ¼rlÃ¼ blok vardÃ½r :
+   - Biri Normal sohbeti gÃ¶steren, 
+      autorefresh le mesaj gÃ¶nderilen
+   - DiÃ°eri Son mesajlarÃ½ gÃ¶steren, 
       Autorefresh olmadan. 
 
-Admin için:
+Admin iÃ§in:
 
--  Açık/Kapalı  BBCode
-- Mesajlar için müsait renklerin seçeneği
-- Ip adresleri kaydedilir, ve direk zamanının yanında görünür
-(mesaj yazanın nickinin üzerine geldiğinizde)
--Veritabanında mesajların sayısını gösterir
-- Silme özelliği pek gelişmiş değildir.Ancak şöyledir :
-   - Mesajların sayısı ile
+-  AÃ§Ã½k/KapalÃ½  BBCode
+- Mesajlar iÃ§in mÃ¼sait renklerin seÃ§eneÃ°i
+- Ip adresleri kaydedilir, ve direk zamanÃ½nÃ½n yanÃ½nda gÃ¶rÃ¼nÃ¼r
+(mesaj yazanÃ½n nickinin Ã¼zerine geldiÃ°inizde)
+-VeritabanÃ½nda mesajlarÃ½n sayÃ½sÃ½nÃ½ gÃ¶sterir
+- Silme Ã¶zelliÃ°i pek geliÃ¾miÃ¾ deÃ°ildir.Ancak Ã¾Ã¶yledir :
+   - MesajlarÃ½n sayÃ½sÃ½ ile
    - Tarih ile
-- Html arşiv dosyasını yaratabilir silinen mesajlar için
-- Yükseklik ebatlarını seçebilir (anasayfadaki blok için).
-- Gruplar tarafından izinleri seçebilir, mesajlara izin vermek veya yollamamak için.
-- Bir tıklamayla modülü klonlayabilir ve fazla oda açabilir bu yolla
-- Seçili nickname anonymous dur değiştirebilirsiniz yoksa default olarak kalır.
+- Html arÃ¾iv dosyasÃ½nÃ½ yaratabilir silinen mesajlar iÃ§in
+- YÃ¼kseklik ebatlarÃ½nÃ½ seÃ§ebilir (anasayfadaki blok iÃ§in).
+- Gruplar tarafÃ½ndan izinleri seÃ§ebilir, mesajlara izin vermek veya yollamamak iÃ§in.
+- Bir tÃ½klamayla modÃ¼lÃ¼ klonlayabilir ve fazla oda aÃ§abilir bu yolla
+- SeÃ§ili nickname anonymous dur deÃ°iÃ¾tirebilirsiniz yoksa default olarak kalÃ½r.
 
 
 
@@ -60,15 +60,15 @@ Admin için:
 
 
 Lisans
-Bu modül GPL lisansına sahiptir. Lısansı görmek için LICENSE.txt i inceleyin.
-Tüm hakları Niluge_KiWi ' a aittir!
-Resimler belki bu modül için kullanılabilir ama başka bir yerde kullanmak isterseniz Niluge_KiWi' den izin almanız gerekir!
-Niluge_KiWi iletişim için kiwiiii@gmail.com
+Bu modÃ¼l GPL lisansÃ½na sahiptir. LÃ½sansÃ½ gÃ¶rmek iÃ§in LICENSE.txt i inceleyin.
+TÃ¼m haklarÃ½ Niluge_KiWi ' a aittir!
+Resimler belki bu modÃ¼l iÃ§in kullanÃ½labilir ama baÃ¾ka bir yerde kullanmak isterseniz Niluge_KiWi' den izin almanÃ½z gerekir!
+Niluge_KiWi iletiÃ¾im iÃ§in kiwiiii@gmail.com
 Web sitesi
 http://xoops-demo.niluge-kiwi.info/
 
 // ======================================================================== //
-//    Türkçe çeviri: Engin YILDIRIM
+//    TÃ¼rkÃ§e Ã§eviri: Engin YILDIRIM
 //                  (By BaCKStagE)
 //                                 admin-denetim@hotmail.com
 //     www.xoopshocasi.com
